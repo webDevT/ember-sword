@@ -43,11 +43,11 @@ $('.header').removeClass("sticky");
 //-------end sticky header--------
 
 
-// $('.media__play-button').click(function(){ 
-//     $(this).toggleClass('active');
-//      $('.media__slider .items_slider--video').toggleClass('active');
-//     $('.slider-nav .items_slider--video').toggleClass('active');
-//   });
+$('.media__play-btn').click(function(){ 
+    $(this).toggleClass('active');
+    //  $('.media__slider .items_slider--video').toggleClass('active');
+    // $('.slider-nav .items_slider--video').toggleClass('active');
+  });
 
 
 $('.slider-nav .items_slider--video').click(function(){ 
@@ -59,6 +59,11 @@ $('.media__slider .items_slider--video').click(function(){
     $('.media__play-button').toggleClass('active');
     $('.slider-nav .items_slider--video').toggleClass('active');
      $(this).toggleClass('active');
+  });
+
+$('.dropdown-list__item-header').click(function(){ 
+    $(this).parent().toggleClass('active');
+
   });
 
 
@@ -145,6 +150,55 @@ responsive: [
 
 }
 
+if(window.innerWidth < 768) {
+ $('.slider-all-news').slick({
+prevArrow: false,
+nextArrow: false,
+slidesToShow: 3,
+
+responsive: [
+{
+    breakpoint: 768,
+    settings: {
+    slidesToShow: 3,
+    centerPadding: '50px',
+    centerMode: true
+    }
+  },
+   
+   {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 2,
+    centerPadding: '50px',
+    centerMode: true
+     
+     
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+    centerPadding: '50px',
+    centerMode: true   
+     
+    }
+  },
+  ]
+
+});
+
+}
+
+ $('.jobs__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,  
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  });
+
  $('.media__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -224,5 +278,17 @@ $(".popup__tabs .tab").click(function() {
   $(".popup__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
   $(".popup__tabs .tab_item").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");
+
 //----------end popup---------------
+
+$(".page-tab").click(function() {
+  $(".page-tab").removeClass("active").eq($(this).index()).addClass("active");
+  $(".page-tab__item").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
+
+
+$(".page-tab--media").click(function() {
+  $(".page-tab--media").removeClass("active").eq($(this).index()).addClass("active");
+  $(".page-tab__item--media").hide().eq($(this).index()).fadeIn()
+}).eq(0).addClass("active");
 

@@ -104,6 +104,11 @@
 		max-width: 1000px
 	.pre-register input
 		width: 349px
+	.last-news__item
+		padding-top: 49px
+	.last-news__item--big
+		padding-top: 250px
+
 
 
 
@@ -152,6 +157,10 @@
 		margin-bottom: 20px
 	.popup__tabs .tab_item
 		padding-bottom: 20px
+	.page-tab--media
+		padding: 13px 20px
+	.press-kit .wrapper
+		padding: 80px 40px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1300px)
 	/**/
@@ -237,11 +246,18 @@
 	.login-popup-wrapper .logo
 		margin-bottom: 15px
 	.login-popup-wrapper
-		padding-top: 15px
+		padding-top: 10px
 	.popup__tabs .tab_item
 		padding: 20px
 	.popup__tabs .tab
 		width: 138px
+	.last-news__item
+		padding: 40px 20px
+	.last-news__item--big
+		padding-top: 226px
+	.last-news__title
+		font-size: 18px
+
 
 
 
@@ -317,7 +333,21 @@
 		margin-right: 10px
 	.pre-register input
 		width: 193px
-
+	
+	.page-tab
+		padding: 10px 20px
+	.last-news__title
+		font-size: 17px
+	.last-news__item
+		padding-bottom: 20px
+	.last-news__item--big 
+		padding-top: 201px
+	.media__soc-wrapper li
+		margin-left: 10px
+	.page-header__soc-title--aqua
+		display: none
+	h3 
+		font-size: 24px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 992px)
@@ -551,6 +581,83 @@
 	.pre-register
 		form 
 			min-width: 460px
+	.page-header__top,
+	.page-header__bottom 
+		flex-direction: column
+	.page-header
+		padding-top: 160px
+		min-height: auto
+		h1 
+			padding-bottom: 29px
+		.wrapper 
+			max-width: 100%
+	.page-header__bottom
+		padding-top: 50px
+	.page-header__bottom 
+		align-items: center
+	.page-header__social
+		order: 1
+		margin-bottom: 60px
+	.page-tabs
+		order: 2
+		width: 100%
+		display: flex 
+		justify-content: space-between
+
+	.page-header__soc-title
+		display: none
+	.page-tab
+		padding: 13px 30px
+		width: 25%
+	.search-wrapper
+		padding: 0 20px
+	.last-news__item
+		padding: 25px 20px
+	.last-news__title
+		font-size: 18px
+		margin-bottom: 15px
+	.last-news__date
+		font-size: 14px
+	.news-content
+		padding-top: 40px
+	.last-news__item--big 
+		margin-bottom: 0
+	.page-pagination
+		padding-bottom: 30px
+	.slider-all-news .items_slider
+		margin-bottom: 25px
+	.media__soc-wrapper li
+		margin-left: 20px
+	.page-tabs--media
+		flex-wrap: wrap
+	.media__play-btn:before
+		transform: translate(-50%, -50%) scale(1)
+	.page-header--team
+		padding-top: 100px
+		padding-bottom: 10px
+		.wrapper
+			max-width: 90%
+	h3 
+		font-size: 20px
+	.team__photo
+		top: -30px
+	.team__text
+		margin-bottom: 20px
+	.members-item
+		margin-bottom: 30px
+	.jobs__slider
+		margin-top: 40px
+	.opportunities
+		margin-top: 40px
+		max-width: 90%
+	
+
+
+
+
+
+
+
 
 
 
@@ -586,6 +693,11 @@
 		content: url('../img/title-img-sm.svg')
 		position: relative
 		top: 4px
+	.press-kit h2:before 
+		content: url('../img/title-img2-sm.svg')
+		position: relative
+		top: 4px
+
 		
 	.news 
 		position: relative 
@@ -623,7 +735,9 @@
 		padding-left: 32px
 	.media
 		padding-top: 40px
-		padding-bottom: 55px
+		padding-bottom: 0px
+	.pre-register
+		padding-top: 55px
 	.pre-register__image
 		margin-top: 37px
 	.pre-register
@@ -650,6 +764,51 @@
 	.pre-register
 		form 
 			min-width: 100%
+	.all-news
+		position: static
+	.page-tab--media
+		min-width: 33.3%
+	.page-tab__item--media
+		margin-bottom: 30px
+	.media__play-btn:before
+		transform: translate(-50%, -50%) scale(1)
+	h3 
+		font-size: 22px
+	.jobs__slider .media__slider-num
+		font-size: 26px
+	.dropdown-list__item-header
+		padding: 20px 15px
+	.dropdown-list__item-title
+		font-size: 20px
+	.dropdown-list__item-date .date
+		margin-right: 5px
+	.dropdown-list__item-date .date
+		display: none
+	.opportunities
+		.wrapper
+			max-width: 100%
+	.dropdown-list__item.active
+		padding: 25px 15px
+		p 
+			font-size: 14px
+			margin-bottom: 5px
+		li 
+			font-size: 14px
+		ul 
+			margin-bottom: 5px
+		.link-with-arrow
+			margin-top: 20px
+	.dropdown-list__item.active .dropdown-list__item-header
+		padding-bottom: 15px
+	.opportunities
+		padding-bottom: 50px
+
+
+
+
+
+
+
 
 
 
@@ -690,6 +849,31 @@
 		margin-bottom: 10px
 	.popup__tabs .tab
 		padding-bottom: 6px
+	.page-tab--media
+		min-width: 33.3%
+		padding: 13px 5px
+		font-size: 14px
+	.page-tab--media.active 
+		text-transform: none
+	.media__play-btn:before
+		transform: translate(-50%, -50%) scale(1)
+	.dropdown-list__item-title
+		font-size: 16px
+	
+	.press-kit h2:before
+		margin-right: 20px
+	.press-kit h2:after
+		margin-left: 20px
+	.press-kit p
+		margin: 20px auto
+		font-size: 14px
+	.press-kit .wrapper
+		padding: 30px 10px
+		clip-path: polygon(98% 0, 100% 1%, 100% 100%, 2% 100%, 0 99%, 0 0)
+	.team__text
+		font-size: 14px
+
+	
 
 
 
