@@ -1,0 +1,26 @@
+<svg width="535" height="670" viewBox="0 0 535 670" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path opacity="0.8" d="M1.5 661.379V8.62132L8.62132 1.5H267H526.379L533.5 8.62133V661.379L526.379 668.5H267H8.62133L1.5 661.379Z" fill="#27545B" stroke="#191919" stroke-width="3"/>
+<rect width="19" height="19" transform="matrix(-1 0 0 1 22 3)" fill="url(#pattern0)"/>
+<line x1="22" y1="4" x2="513" y2="4" stroke="#6FA1BA" stroke-width="2"/>
+<line x1="22" y1="666" x2="513" y2="666" stroke="#6FA1BA" stroke-width="2"/>
+<line x1="531" y1="22" x2="531" y2="648" stroke="#6FA1BA" stroke-width="2"/>
+<line x1="4" y1="22" x2="4.00003" y2="648" stroke="#6FA1BA" stroke-width="2"/>
+<rect x="22" y="667" width="19" height="19" transform="rotate(-180 22 667)" fill="url(#pattern1)"/>
+<rect width="19" height="19" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 513 667)" fill="url(#pattern2)"/>
+<rect x="513" y="3" width="19" height="19" fill="url(#pattern3)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.0526316)"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.0526316)"/>
+</pattern>
+<pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.0526316)"/>
+</pattern>
+<pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.0526316)"/>
+</pattern>
+<image id="image0" width="19" height="19" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAABBklEQVQ4jaXTQS4EQRTG8d9gNRxhEmsLbuAEgkgcwBYRRzBzhTH22DgBCweQ2FmxloitjdjJSCfV8fR0p031l1S6Xr2qf3W9r6p3enU/lachRnHlQiZIgp1VYb1/tmVchrXf+Gj6s2KnaWhx1zU84iDFn9jDGIfl3KUKTICU8Ssu0E/xO7bwhB2cY7FIFAa01iKoAGzjDet4wErdMSNsNDPKLTYTaIC7CGqC1QEn2E216ifwIOWu22AlsHT6JLlX1OYGG2nOSzKgFVancSp6oS/sp28W7Cj0j/Eck11ewGp1YF5YNGXmCs0Lq7o8jMmcYzbdw+ya1QLj28wB/lEXN2eAXWG/wg/htjJI6ORwcQAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

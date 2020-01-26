@@ -22,6 +22,8 @@ h1
 	text-shadow: 0px 3px 1px rgba(25, 25, 25, 0.6)
 	font-weight: 400
 	color: #fff
+
+
 h2 
 	font-family: $BoucherieFlared
 	font-size: 44px
@@ -44,6 +46,26 @@ button
 	outline: none
 	background: transparent
 	border: none
+.scroll-down
+	position: fixed
+	left: 0px 
+	bottom: 10%
+	transform: rotate(-90deg)
+	font-family: $exo2
+	font-weight: 600
+	font-size: 14px
+	line-height: 14px
+	cursor: pointer
+	color: $blue
+	z-index: 9999
+	img
+		transform: rotate(90deg)
+		position: relative
+		top: -1px
+		margin-right: 20px
+.scroll-down.scroll-down--aqua
+	color: $aqua
+
 .input-wrapper
 	display: inline-block
 	background: #001B29
@@ -243,7 +265,15 @@ input:focus
 	font-size: 16px
 	letter-spacing: 1px
 
-
+.header-bg
+	position: absolute
+	top: 0 
+	left: 0 
+	width: 100%
+	background: url('../img/header-bg.png')
+	background-size: 100%
+	background-repeat: no-repeat
+	min-height: 1600px
 // //---end global style----
 
 //start header style----
@@ -268,7 +298,44 @@ input:focus
 	ul 
 		display: flex 
 		justify-content: space-between
-		
+.header-home-page
+	color: $blue	
+	.menu__item-drop-down:after
+		content: url('../img/small-down-blue.svg')
+	a 
+		color: $blue
+	.logo-white,
+	.user-white
+		display: none
+.header-home-page.sticky
+	color: #fff	
+	.menu__item-drop-down:after
+		content: url('../img/small-down.svg')
+
+	a 
+		color: #fff
+	.menu__item-drop-down
+		a 
+			color: $blue
+	.logo-white,
+	.user-white
+		display: inline-block
+	.logo-blue,
+	.user-pink
+		display: none
+.header-home-page.active
+	.logo-white,
+	.user-white
+		display: inline-block
+	.logo-blue,
+	.user-pink
+		display: none
+
+
+
+
+
+
 .menu__item-drop-down
 	padding-right: 24px
 	position: relative
@@ -276,7 +343,7 @@ input:focus
 .menu__item-drop-down:after 
 	content: url('../img/small-down.svg')
 	position: absolute
-	top: 3px
+	top: 0px
 	right: 0
 .dropdown-menu-wrapper
 	display: none
@@ -364,6 +431,7 @@ ul.dropdown-menu
 	height: 3px
 	background: #fff
 	margin-bottom: 4px
+	box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1)
 .header__menu-button
 	position: absolute
 	top: 28px
@@ -389,17 +457,20 @@ ul.dropdown-menu
 
 //-----start main screen style----
 .main-screen 
-	background: url('../img/header-bg.png')
+	//background: url('../img/header-bg.png')
 	background-size: 100%
 	background-position: top center
 	background-repeat: no-repeat
 	color: #fff
 	text-align: center
-	padding-top: 359px
+	padding-top: 324px
+	position: relative
 	//min-height: 85vh
 	.pink-button 
 		padding-right: 10px
 		margin-left: 60px
+	
+
 	h1 
 		max-width: 880px
 		margin: 0 auto
@@ -414,17 +485,34 @@ ul.dropdown-menu
 .main-screen__play-button-wrapper
 	display: flex
 	align-items: center
+.play-button
+	position: relative
 .play-button-text
 	font-family: $lilita
-	font-weight: 400
+	font-style: normal
+	font-weight: normal
 	font-size: 16px
 	letter-spacing: 1px
 	text-transform: uppercase
-	color: #FFFFFF
+	color: #fff
 	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.55)
+	margin-left: 10px
+.main-screen .play-button
 	position: relative
-	top: -2px
-	padding-left: 10px
+.main-screen .play-button-text
+	font-family: $lilita
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	letter-spacing: 1px
+	text-transform: uppercase
+	color: #27545B
+	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.55)
+	position: absolute
+	left: 75px
+	top: 24px
+	margin-left: 0px
+
 .main-screen__soc-wrapper
 	margin: 0 auto
 	width: 234px
@@ -434,6 +522,7 @@ ul.dropdown-menu
 	align-items: center
 	justify-content: center
 	margin-top: 143px
+	
 	ul 
 		display: flex
 		justify-content: space-between
@@ -444,7 +533,7 @@ ul.dropdown-menu
 .main-screen__items
 	display: flex 
 	justify-content: center
-	margin-top: 98px
+	margin-top: 210px
 
 .main-screen__item
 	width: 464px
@@ -506,7 +595,8 @@ ul.dropdown-menu
 //-----end main screen style----
 
 //-------start news section style--------
-.news 
+.news
+	position: relative 
 	padding-top: 100px
 	.items_slider
 		padding: 0 20px
@@ -1452,11 +1542,22 @@ input[type="checkbox"]:checked + span
 		height: 100%
 		display: flex
 		align-items: center
+		position: relative
 		.row 
 			width: 100%
-			.col-md-6:last-child 
+			padding-right: 0
+
+			.col-lg-6:last-child 
 				justify-content: flex-end
 				display: flex
+				flex-direction: row
+				padding-right: 0
+			.col-lg-6
+				flex-direction: column
+				display: flex
+				justify-content: center
+
+
 	h1 
 		width: 533px
 		margin-top: 40px
@@ -1464,21 +1565,46 @@ input[type="checkbox"]:checked + span
 		position: static
 		display: block
 		transform: translate(0, 0)
+		padding-top: 0
+		background-image: url(../img/v2-form.png)
+		background-size: 100% 100%
+		background-repeat: no-repeat
+		background-position: center
+		.popup__tabs .tab_item
+			background: transparent
 .landing-page__footer
 	position: absolute 
-	bottom: 40px
+	bottom: 20px
 	left: 0
 	width: 100%
-	.wrapper
-		display: flex 
-		justify-content: space-between
-		width: 100%
+	display: flex 
+	justify-content: space-between
+	width: 100%
+
+		
+
 	
 	.main-screen__soc-wrapper
 		margin: 0
 	.link-with-arrow
 		margin-top: 0
 		margin-right: 15px
+.landing__title,
+.landing__sub-title
+	text-align: left
+.landing__title
+	font-family: $BoucherieFlared
+	font-size: 44px
+	margin-bottom: 10px
+.landing__sub-title	
+	font-family: $BoucherieFlared
+	font-size: 30px
+	margin-bottom: 30px
+	span 
+		color: $pink
+.single-news__image-wrapper
+	position: relative
+
 //---------end lending style-----------
 @import "media" 
 
