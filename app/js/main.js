@@ -65,12 +65,12 @@ $('.media__play-btn').click(function(){
 
 
 $('.slider-nav .items_slider--video').click(function(){ 
-    $('.media__play-button').toggleClass('active');
+   // $('.media__play-button').toggleClass('active');
      $('.media__slider .items_slider--video').toggleClass('active');
     $('.slider-nav .items_slider--video').toggleClass('active');
   });
 $('.media__slider .items_slider--video').click(function(){ 
-    $('.media__play-button').toggleClass('active');
+   // $('.media__play-button').toggleClass('active');
     $('.slider-nav .items_slider--video').toggleClass('active');
      $(this).toggleClass('active');
   });
@@ -307,13 +307,59 @@ jQuery(function($){
   });
 });
 
+//---------start video popup--------------
+$('.video-popup-link').click(function(e){
+   e.preventDefault();
+    $('.video-popup').show();
+
+  })
+$('.close').click(function(e){
+    $('.video-popup').hide();
+  })
+
+
+jQuery(function($){
+  $(document).mouseup(function (e){ 
+    var div = $(".video-popup"); 
+    var divWrap = $(".video-popup-wrapper");
+    if (!divWrap.is(e.target) 
+        && divWrap.has(e.target).length === 0) {
+      div.hide();
+
+    }
+  });
+});
+//-------------end video popup---------------
+
 
 $(".popup__tabs .tab").click(function() {
   $(".popup__tabs .tab").removeClass("active").eq($(this).index()).addClass("active");
   $(".popup__tabs .tab_item").hide().eq($(this).index()).fadeIn()
 }).eq(0).addClass("active");
 
+
+$('.registr-link').click(function(e){
+  $('.tab_item').hide();
+    $('.tab_item--reg').show();
+    $('.popup__tabs .tab-log').removeClass('active');
+     $('.tab-reg').addClass('active');
+    
+    
+  })
+
+$('.log-link').click(function(e){
+  $('.tab_item').hide();
+    $('.tab_item--login').show();
+    $('.popup__tabs .tab-reg').removeClass('active');
+     $('.tab-log').addClass('active');
+    
+    
+  })
+
 //----------end popup---------------
+
+
+
 
 const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
@@ -326,3 +372,40 @@ for (let anchor of anchors) {
     })
   })
 }
+$(document).on('click', '.media__play-button', function() {
+  var $video = $('#video'),
+    src = $video.attr('src');
+ 
+  $video.attr('src', src + '&autoplay=1');
+ $(this).hide();
+ $(this).parent().find('.media__pause-button').show();
+
+});
+$(document).on('click', '.media__pause-button', function() {
+  var $video = $('#video'),
+    src = $video.attr('src');
+ 
+  $video.attr('src', src + 'pause');
+ $(this).hide();
+ $('.media__play-button').show();
+
+});
+
+
+
+// $(document).on('click', '.media__play-button.active', function() {
+//   var $video = $('#video'),
+//     src = $video.attr('src');
+ 
+//   $video.attr('src', src + '&pause');
+//  // $('.media__play-button').addClass('active');
+
+// });
+// $(document).on('click', '.media__play-button', function() {
+//   var $video = $('#video'),
+//     src = $video.attr('src');
+ 
+//   $video.attr('src', src + '&autoplay=1');
+//  $('.media__play-button').addClass('active');
+
+// });
