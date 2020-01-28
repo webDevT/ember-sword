@@ -148,6 +148,7 @@ nextArrow: false,
 slidesToShow: 1,
 centerPadding: '50px',
 centerMode: true,
+autoplay: true,
 
 responsive: [
 {
@@ -285,13 +286,14 @@ responsive: [
 
 $('.reg-link').click(function(e){
    e.preventDefault();
-    $('.reg-popup').show();
-    $('.login-popup').hide();
+    $('.reg-popup').fadeIn();
+    $('.login-popup').fadeOut();
     $('.logo').addClass('active');
+
 
   })
 $('.close').click(function(e){
-    $('.reg-popup').hide();
+    $('.reg-popup').fadeIn();
   })
 
 
@@ -301,7 +303,7 @@ jQuery(function($){
     var divWrap = $(".login-popup-wrapper");
     if (!divWrap.is(e.target) 
         && divWrap.has(e.target).length === 0) {
-      div.hide();
+      div.fadeOut();
 
     }
   });
@@ -377,16 +379,16 @@ $(document).on('click', '.media__play-button', function() {
     src = $video.attr('src');
  
   $video.attr('src', src + '&autoplay=1');
- $(this).hide();
+ //$(this).hide();
  $(this).parent().find('.media__pause-button').show();
 
 });
-$(document).on('click', '.media__pause-button', function() {
+$(document).on('click', '.items_slider--photo, .next, .prev', function() {
   var $video = $('#video'),
     src = $video.attr('src');
  
   $video.attr('src', src + 'pause');
- $(this).hide();
+ //$(this).hide();
  $('.media__play-button').show();
 
 });

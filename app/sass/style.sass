@@ -56,7 +56,7 @@ button
 .scroll-down
 	position: fixed
 	left: 0px 
-	bottom: 10%
+	bottom: 15%
 	transform: rotate(-90deg)
 	font-family: $exo2
 	font-weight: 600
@@ -65,11 +65,17 @@ button
 	cursor: pointer
 	color: $blue
 	z-index: 9999
-	img
-		transform: rotate(90deg)
-		position: relative
-		top: -1px
+	.img
+
+		transform: rotate(90deg) translate(50%, 100%)
+		position: absolute
+		bottom: 0
+
 		margin-right: 20px
+		width: 14px
+		height: 31px
+		background: url('../img/css_sprites.png') -130px -372px
+		
 .scroll-down.scroll-down--aqua
 	color: $aqua
 
@@ -95,7 +101,13 @@ input[type="password"]
 	outline: none
 	color: rgba(255, 255, 255, 0.6)
 	width: 100%
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover
+	border: 3px solid #fff
 .search-wrapper
+
 	max-width: 390px
 	img 
 		max-width: 100%
@@ -125,6 +137,17 @@ input[type="search"]:focus
 input:focus
 	color: #FFFFFF
 	border: 2px solid #FFF
+.search-line 
+	width: 100%
+	max-height: 20px
+.search-icon
+	width: 18px 
+	height: 18px
+	position: absolute 
+	right: 0
+	top: 8px
+.search-wrapper
+	position: relative
 .input-wrapper.valid 
 	input
 		border: 2px solid $aqua
@@ -149,6 +172,7 @@ input:focus
 	position: relative
 	left: -15px
 	display: inline-block
+	transition: all 0.5s
 	.pink-button__bg
 		width: 265px 
 		height: 50px
@@ -173,6 +197,21 @@ input:focus
 		padding-bottom: 2px
 		position: relative
 		z-index: 1
+.pink-button:hover 
+	transform: scale(1.1)
+// .pink-button:before
+// 	content: ''
+// 	width: 100%
+// 	height: 22px
+// 	position: absolute
+// 	top: 47px
+// 	left: 0
+// 	background: rgba(0, 0, 0, 0.1) skewX(-1deg)
+// 	z-index: 1
+// 	transform: translate(0, -20px)
+// 	transition: 0.5s
+// .pink-button:hover:before	
+// 	transform: translate(0, 300px) skewX(-45deg)
 
 .news__label,
 .patch__label	
@@ -218,11 +257,15 @@ input:focus
 	color: #FEF3DA
 	display: flex
 	align-items: center
+	transition: all 0.5s
 	svg 
 		margin-left: 10px
 		max-width: 16px 
 		max-height: 16px
-
+		transition: all 0.5s
+.link-with-arrow:hover 
+	svg 
+		transform: translate(10px)
 .page-tab__item
 	display: none
 .page-tab__item:first-child 
@@ -270,14 +313,17 @@ input:focus
 	margin-bottom: 0px
 	margin-bottom: 50px
 .quote:before 
-	content: url('../img/quote.svg')
+	content: ''
 	position: absolute
 	font-family: $BoucherieBlock
 	font-size: 60px
 	color: $pink
 	top: 0px
 	left: -20px
-	transform: translate(-100%, -30%)
+	transform: translate(-100%, 50%)
+	width: 21px
+	height: 16px
+	background: url('../img/css_sprites.png') -240px -229px
 
 .quote-author
 	margin-top: 20px
@@ -311,6 +357,14 @@ input:focus
 		align-items: center
 	a 
 		color: #fff
+.logo__menu
+	width: 205px
+	height: 56px
+	a 
+		display: block 
+		width: 205px
+		height: 56px
+		background: url('../img/css_sprites.png') -296px -10px
 
 .header.sticky
 	background: rgba(39, 84, 91, 0.9)
@@ -326,11 +380,19 @@ input:focus
 		fill: $blue
 	a 
 		color: $blue
-	.logo-white
-		display: none
 	.login-register-wrapper
 		svg 
 			fill: $pink
+	.logo__menu
+		
+		width: 205px
+		height: 56px
+		a 
+			display: block 
+			width: 205px
+			height: 56px
+			background: url('../img/css_sprites.png') -296px -86px
+
 
 .login-register-wrapper
 	svg 
@@ -351,21 +413,8 @@ input:focus
 	.login-register-wrapper
 		svg
 			fill: #fff
-	.logo-white
-		display: inline-block
-	.logo-blue
-		display: none
-.header-home-page.active
-	.logo-white
-		display: inline-block
-	.logo-blue
-		display: none
-
-
-
-
-
-
+	.logo__menu a
+		background-position: -296px -10px
 .menu__item-drop-down
 	padding-right: 24px
 	position: relative
@@ -526,6 +575,12 @@ ul.dropdown-menu
 .main-screen__play-button-wrapper
 	display: flex
 	align-items: center
+	width: 210px
+	height: 75px
+	background: url('../img/css_sprites.png') -10px -180px
+	transition: all 0.5s
+.main-screen__play-button-wrapper:hover 
+	transform: scale(1.1)
 .play-button
 	position: relative
 .play-button-text
@@ -535,34 +590,23 @@ ul.dropdown-menu
 	font-size: 16px
 	letter-spacing: 1px
 	text-transform: uppercase
-	color: #fff
-	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.55)
-	margin-left: 10px
-.main-screen .play-button
-	position: relative
-.main-screen .play-button-text
-	font-family: $lilita
-	font-style: normal
-	font-weight: normal
-	font-size: 16px
-	letter-spacing: 1px
-	text-transform: uppercase
+	margin-left: 70px
 	color: #27545B
 	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.55)
-	position: absolute
-	left: 75px
-	top: 24px
-	margin-left: 0px
 
 .main-screen__soc-wrapper
 	margin: 0 auto
 	width: 234px
 	height: 37px
-	background: url('../img/soc-wrapper-bg.svg')
+	background: url('../img/css_sprites.png') -10px -315px
 	display: flex
 	align-items: center
 	justify-content: center
 	margin-top: 143px
+	svg 
+		fill: $blue
+		height: 24px
+		width: 24px
 	
 	ul 
 		display: flex
@@ -585,6 +629,7 @@ ul.dropdown-menu
 	align-items: center
 	text-align: left
 	color: #fff
+	transition: all 0.5s
 
 	.character-image 
 		position: absolute
@@ -598,7 +643,7 @@ ul.dropdown-menu
 	background-repeat: no-repeat
 	.character-image
 		right: -40px
-		z-index: 999
+		z-index: 9
 		
 .main-screen__item:nth-child(2)
 	background: url('../img/item-bg-2.png')	
@@ -633,6 +678,12 @@ ul.dropdown-menu
 	letter-spacing: 1px
 	img
 		margin-left: 10px
+.main-screen__item:hover 
+	transform: scale(1.1)
+	z-index: 9999
+	position: relative
+	border-radius: 15px
+
 //-----end main screen style----
 
 //-------start news section style--------
@@ -644,10 +695,17 @@ ul.dropdown-menu
 		box-sizing: border-box
 		color: $blue
 		outline: none
+		transition: all 0.5s
 		img
 			width: 100%			
 			display: block
 			margin: 0 auto
+			transition: all 0.5s
+	.items_slider:hover
+		transform: scale(0.95)
+		img 
+			border-radius: 20px
+		
 .slider_box.wrapper
 	max-width: 1434px
 	margin-top: 40px
@@ -786,9 +844,11 @@ ul.dropdown-menu
 		width: 100%
 	.items_slider--video
 		position: relative
-		cursor: url('../img/cursor.svg'), auto
+		cursor: url('../img/css_sprites.png') -10px -372px
+
+	
 	.items_slider--video.active
-		cursor: url('../img/play-btn.svg'), auto
+		// cursor: url('../img/play-btn.svg'), auto
 	.media__slider-num
 		position: absolute
 		left: 3% 
@@ -806,21 +866,33 @@ ul.dropdown-menu
 	cursor: pointer
 
 .media__play-button:before
-	content: url('../img/play-button.svg')
+	content: ''
+	width: 44px
+	height: 44px
+	background: url('../img/css_sprites.png') -376px -162px
 	position: absolute
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
 .media__play-button.active:before
-	content: url('../img/pause-button.svg')
-.media__play-btn:before
-	content: url('../img/play-b.svg')
-.media__play-btn.active:before
-	content: url('../img/pause-b.svg')
-.media__play-btn:before
-	content: url('../img/play-b.svg')
+	content: ''
+	width: 44px
+	height: 44px
+	background: url('../img/css_sprites.png') -440px -162px
 .media__play-button--aqua:before
-	content: url('../img/play-b.svg')
+	content: ''
+	width: 60px
+	min-height: 70px
+	background: url('../img/css_sprites.png') -296px -162px
+.media__play-btn--aqua
+	width: 60px
+	height: 70px
+// .media__play-btn.active:before
+// 	content: url('../img/pause-b.svg')
+// .media__play-btn:before
+// 	content: url('../img/play-b.svg')
+// .media__play-button--aqua:before
+// 	content: url('../img/play-b.svg')
 
 .slider-nav .slick-current img
 	background: #fff
@@ -913,6 +985,10 @@ ul.dropdown-menu
 	max-width: 100%
 	position: relative
 	right: -120px
+.large-arrow
+	width: 390px
+	height: 20px
+	background: url('../img/css_sprites.png') -10px -275px
 
 //-------end pre-register style
 
@@ -950,6 +1026,8 @@ ul.dropdown-menu
 		max-height: 24px
 		max-width: 24px
 		fill: #27545B
+	svg:hover 
+		opacity: 0.8
 	.footer-soc-bg
 		position: absolute
 		top: 0 
@@ -962,6 +1040,9 @@ ul.dropdown-menu
 	align-items: flex-end
 .footer__logo 
 	max-width: 100%
+	background: url('../img/css_sprites.png') -296px -10px
+	width: 205px 
+	height: 56px
 .footer__menu-title
 	font-family: $lilita
 	font-size: 16px
@@ -1001,7 +1082,15 @@ ul.dropdown-menu
 	padding-top: 28px	
 	color: #fff
 	.logo 
+		margin: 0 auto
 		margin-bottom: 36px
+		width: 205px
+		height: 56px
+		background: url('../img/css_sprites.png') -296px -10px
+		a 
+			width: 100%
+			height: 100%
+
 .reg-popup,
 .video-popup 
 	background: rgba(39, 84, 91, 0.95)
@@ -1012,6 +1101,8 @@ ul.dropdown-menu
 	top: 0px
 	left: 0
 	z-index: 9999
+	
+
 .video-popup-wrapper
 	top: 50%
 	left: 50%
@@ -1084,12 +1175,14 @@ input[type="checkbox"] + span
 	top: 0
 	width: 100%
 	height: 100%
-	background: url('../img/checkbox.svg') 
-	background-size: 100%
-	background-repeat: no-repeat
+	width: 29px
+	height: 29px
+	background: url('../img/css_sprites.png') -240px -180px 	
 	cursor: pointer
 input[type="checkbox"]:checked + span
-	background: url('../img/checked.svg')
+	width: 29px
+	height: 29px
+	background: url('../img/css_sprites.png') -264px -315px
 .checkbox__container
 	margin-right: 12px
 //-------end popup style---------
@@ -1466,13 +1559,13 @@ input[type="checkbox"]:checked + span
 	display: flex 
 	justify-content: center
 	align-items: center
-	background: url('../img/tab-bg.svg')
 	cursor: pointer
 	background-size: 100% 
 	background-repeat: no-repeat
 	position: relative
 	top: 58px
 	margin: 0 6px
+	background: url('../img/css_sprites.png') -10px -95px
 	
 
 	a 
@@ -1480,8 +1573,7 @@ input[type="checkbox"]:checked + span
 		font-size: 20px
 		color: #fff
 .faq-tab.active
-	background: url('../img/tab-bg-active.svg')
-	background-size: 100% 
+	background: url('../img/css_sprites.png') -10px -10px
 	background-repeat: no-repeat
 .page-header__top--faq
 	flex-direction: column
@@ -1655,7 +1747,7 @@ input[type="checkbox"]:checked + span
 		display: block
 		transform: translate(0, 0)
 		padding-top: 0
-		background-image: url(../img/v2-form.png)
+		background-image: url('../img/v2-form.png')
 		background-size: 100% 100%
 		background-repeat: no-repeat
 		background-position: center
@@ -1669,6 +1761,9 @@ input[type="checkbox"]:checked + span
 	display: flex 
 	justify-content: space-between
 	width: 100%
+	a:hover 
+		color: #fff
+
 
 		
 
@@ -1693,6 +1788,11 @@ input[type="checkbox"]:checked + span
 		color: $pink
 .single-news__image-wrapper
 	position: relative
+.main-screen__play-button-wrapper--landing
+	background: transparent
+	.play-button-text
+		margin-left: 10px
+		color: #fff
 
 //---------end lending style-----------
 
